@@ -12,6 +12,7 @@
 /build
 .env
 src/firebase-config.js
+public/firebase-messaging-sw.js
 firebase-debug.log
 # misc
 .DS_Store

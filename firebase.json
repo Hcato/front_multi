@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "multi-5a-1b690",
     "public": "build",
     "ignore": [
       "firebase.json",

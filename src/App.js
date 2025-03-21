@@ -1,25 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { generationToken, messaging } from "./firebase-config.js";
+import { onMessage } from "firebase/messaging";
+import toast, {Toaster} from 'react-hot-toast';
 
 function App() {
+  useEffect(() => {
+    generationToken();
+    onMessage(messaging, (payload) =>{
+      console.log(payload);
+      if (payload.notification.body === "lluvia") {
+        toast(payload.notification.body,
+          {
+            icon: '🌧️',
+            style: {
+              borderRadius: '10px',
+              background: '#333',
+              color: '#fff'
+            }
+          }
+        );
+      } else if (payload.notification.body === "¡Tu token fue guardado exitosamente!") {
+        toast(payload.notification.body,
+          {
+            icon: '✅',
+            style:{
+              borderRadius: '10px',
+              background: '#333',
+              color: '#fff'
+            }
+          }
+        );
+      }
+    })
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Toaster position="top-right"
+  reverseOrder={false}/>
   );
 }
 
