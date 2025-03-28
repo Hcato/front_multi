@@ -1,0 +1,91 @@
+.bg-morning {
+  background: linear-gradient(to bottom, #54b5e2, #8cc8e0);
+}
+
+.bg-afternoon {
+  background: linear-gradient(to bottom, #f4a866, #d0c966);
+}
+
+.bg-night {
+  background: linear-gradient(to bottom, #000, #14355a);
+}
+
+.h-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease-in-out;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px white;
+  transition: opacity 1s ease-in-out;
+}
+
+.text {
+  color: white;
+}
+
+.moon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
+  transition: left 0.5s ease-in-out;
+  position: absolute;
+  overflow: hidden;
+}
+
+.moon-shadow {
+  width: 90%; /* Ajustar tamaño para cubrir parte de la luna */
+  height: 100%;
+  background-color: black;
+  border-radius: 47%;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Fases de la luna */
+.moon-luna-nueva .moon-shadow {
+  transform: translateX(0);
+  width: 100%;
+}
+
+.moon-creciente .moon-shadow {
+  transform: translateX(-25%);
+}
+
+.moon-llena .moon-shadow {
+  display: none;
+}
+
+.moon-menguante .moon-shadow {
+  transform: translateX(25%); 
+}
+.cloud {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50px;
+  box-shadow:
+    30px 10px 0 10px #ffffff,
+    -30px 10px 0 10px #ffffff,
+    0px 20px 0 10px #ffffff;
+  opacity: 0.8;
+  animation: moveClouds 20s linear infinite alternate;
+}
+
+@keyframes moveClouds {
+  from {
+    transform: translateX(-20px);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+
