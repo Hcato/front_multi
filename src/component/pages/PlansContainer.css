@@ -1,0 +1,58 @@
+/* Nuevos estilos */
+.plans-page-container {
+  position: relative;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-3px);
+}
+
+/* Estilos existentes ajustados */
+.plans-background {
+  position: relative;
+  background-image: url('../../assets/multimedia/Maps.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px 40px; /* Más padding arriba para el botón */
+  min-height: 100vh;
+}
+
+.plans-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.plans-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px; /* Espacio adicional */
+}

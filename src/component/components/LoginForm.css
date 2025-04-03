@@ -1,0 +1,146 @@
+/* Contenedor principal de la página de login */
+.login-page-container {
+  min-height: 100vh;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+/* Estilos del formulario de login */
+.auth-login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem;
+  background: rgba(0, 0, 0, 0.85);  /* Fondo más oscuro */
+  border: 2px solid #ff8a00;         /* Borde naranja */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  margin-top: 2rem;
+}
+
+/* Título del formulario, ahora dentro del form */
+.auth-form-title {
+  color: #ff8a00;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grupos de inputs */
+.auth-input-group {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.auth-input-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #f0f0f0;
+  font-weight: 500;
+}
+
+.auth-input-field {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auth-input-field::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.auth-input-field:focus {
+  outline: none;
+  border-color: #ff8a00;
+  background: rgba(40, 40, 40, 0.8);
+  box-shadow: 0 0 0 3px rgba(255, 138, 0, 0.2);
+}
+
+/* Botón de submit */
+.auth-submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ff8a00, #ff5e00);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.auth-submit-button:hover {
+  background: linear-gradient(135deg, #ff5e00, #ff8a00);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 94, 0, 0.2);
+}
+
+.auth-submit-button:disabled {
+  background: #444;
+  cursor: not-allowed;
+}
+
+/* Mensaje de error */
+.auth-error-message {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  text-align: center;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+/* Footer del formulario */
+.auth-form-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+.auth-form-link {
+  color: #ff8a00;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.auth-form-link:hover {
+  color: #ffaa33;
+}
+
+/* Versión responsive */
+@media (max-width: 768px) {
+  .login-page-container {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+  
+  .auth-login-form {
+    padding: 2rem 1.5rem;
+    margin-top: 4rem;
+  }
+  
+  .auth-form-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .auth-input-field {
+    padding: 0.8rem;
+  }
+}

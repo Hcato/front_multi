@@ -11,12 +11,17 @@ export const sendTokenToBackend = async (token) => {
       body: JSON.stringify({ token }),
     });
 
-    const data = await response.json();
-    return data;
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
+    }
+
+    return await response.json();
   } catch (error) {
     console.error("Error enviando el token al backend:", error);
+    return null; // Manejo del error para que el frontend pueda reaccionar
   }
 };
+
 export const getTemperature = async () => {
   try {
     const response = await fetch(`${API_TEM}/sensor/data`, {
@@ -27,14 +32,14 @@ export const getTemperature = async () => {
     });
 
     if (!response.ok) {
-      throw new Error("Error al obtener los datos");
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
     }
 
-    const data = await response.json();
-    return data; // Devuelve los datos
+    return await response.json();
   } catch (error) {
     console.error("Error en getTemperature:", error);
     return null;
   }
 };
+
 

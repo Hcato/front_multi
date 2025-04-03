@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: white;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

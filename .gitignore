@@ -5,12 +5,13 @@
 /.pnp
 .pnp.js
 
+.env
 # testing
 /coverage
 
 # production
 /build
-.env
+
 src/firebase-config.js
 public/firebase-messaging-sw.js
 firebase-debug.log

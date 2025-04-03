@@ -1,0 +1,18 @@
+/* Footer.css */
+
+.footer {
+    width: 100%;
+    padding: 20px 5%; 
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.1); 
+  }
+  
+  .footer-content {
+    font-size: 0.75rem; 
+    opacity: 0.7;
+    text-align: right;
+    margin-left: auto;
+    max-width: 1200px;
+    padding: 10px 0;
+    font-style: italic; 
+  }
