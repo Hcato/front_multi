@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./principalPage.css"; // Importa los estilos
-import LunarPhase from "../../assets/scripts/lunarPhase";
-import Weather from "../../assets/scripts/openWeather";
+import LunarPhase from "../scripts/lunarPhase";
+import Weather from "../scripts/openWeather";
 
 export default function WeatherBackground() {
   const [bgClass, setBgClass] = useState("bg-morning");

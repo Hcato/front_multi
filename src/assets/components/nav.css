@@ -1,0 +1,136 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  
+  .user-container {
+    display: flex;
+    align-items: center;
+    margin-left: 220px;
+    min-width: 180px;
+  }
+  
+  .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    margin-right: 10px;
+  }
+  
+  .icons-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 320px;
+    position: relative;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 350px;
+    max-height: 500px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    overflow: hidden;
+    z-index: 1001;
+  }
+  
+  .dropdown-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #555;
+  }
+  
+  .mark-all-button {
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .empty-notifications {
+    padding: 20px;
+    text-align: center;
+    color: #aaa;
+  }
+  
+  .notifications-list {
+    max-height: 440px;
+    overflow-y: auto;
+  }
+  
+  .notification-item {
+    padding: 12px;
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .notification-item.unread {
+    background-color: #3a3a3a;
+  }
+  
+  .notification-item.read {
+    background-color: #444;
+  }
+  
+  .notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .notification-icon {
+    font-size: 20px;
+  }
+  
+  .notification-date {
+    font-size: 12px;
+    color: #aaa;
+  }
+  

@@ -1,0 +1,104 @@
+/* Contenedor principal */
+.station-detail-container {
+    display: flex;
+    height: calc(100vh - 60px);
+    margin-top: 60px; /* Espacio para la navbar */
+  }
+  
+  /* Sección del mapa (75%) */
+  .station-map-section {
+    flex: 3;
+    padding: 20px;
+    background: #222;
+    position: relative;
+  }
+  
+  /* Sección de información (25%) */
+  .station-info-section {
+    flex: 1;
+    padding: 20px;
+    background: #181818;
+    overflow-y: auto;
+  }
+  
+  .station-info-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ff9500;
+  }
+  
+  /* Contenedor del mapa */
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 40px); /* Resta el espacio del título */
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilos para Leaflet */
+  .leaflet-container {
+    background-color: #222 !important;
+  }
+  
+  .leaflet-popup-content {
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    border-radius: 6px;
+  }
+  
+  /* Estilos existentes que se mantienen */
+  .station-title {
+    color: #ff9500;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .collaborators-title {
+    color: #ff9500;
+    margin: 20px 0 15px;
+  }
+  
+  .collaborators-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .collaborator-item {
+    background: #333;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .station-detail-container {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .station-map-section,
+    .station-info-section {
+      flex: none;
+      width: 100%;
+      height: auto;
+    }
+    
+    .map-container {
+      height: 300px;
+    }
+  }
