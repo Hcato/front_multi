@@ -313,7 +313,7 @@ const Content = ({ activeSection, associates, setAssociates, requests, setReques
                     <img 
                       src={station.owner.image} 
                       alt={station.owner.username} 
-                      className="owner-img" 
+                      className="user-img"
                     />
                   )}
                 </div>
