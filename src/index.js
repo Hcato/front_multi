@@ -3,19 +3,23 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css';
 import App from './App';
+import Cloudy from './assets/components/navMenu.jsx';
 import Graphics from './assets/pages/Graphics.jsx';
 import Dashboard from './assets/pages/User_Page.jsx';
+import Plans from './assets/pages/plans.jsx';
+import Register from './assets/pages/registered.jsx';
+import Login from './assets/pages/login.jsx';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element: <App/>
+    element: <Cloudy/>
   },
   {
-    path:"/",
-    element: "#aqui ira el login y asi."
+    path:"/app",
+    element: <App/>
   },
   {
     path: "/dashboard",
@@ -24,6 +28,22 @@ const router = createBrowserRouter([
   { 
     path: "/graphics/:stationId",
     element:<Graphics/>
+  },
+  {
+    path: "/plans",
+    element:<Plans/>
+  },
+  {
+    path: "/support",
+    element: "componente"
+  },
+  {
+    path: "/login",
+    element: <Login/>
+  },
+  {
+    path: "/register",
+    element: <Register/>
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

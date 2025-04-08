@@ -220,3 +220,51 @@ export const getStationWithOwner = async (stationId) => {
     throw error;
   }
 };
+export const loginUser = async (email, password) => {
+  try {
+    const response = await fetch(`${API_2}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || 'Error en el login');
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error en loginUser:', error);
+    throw error;
+  }
+};
+export const registerUser = async (userData) => {
+  try {
+    const formData = new FormData();
+    formData.append('username', userData.username);
+    formData.append('email', userData.email);
+    formData.append('password', userData.password);
+    if (userData.image) {
+      formData.append('image', userData.image);
+    }
+    formData.append('token2', userData.token2);
+
+    const response = await fetch(`${API_2}/users`, {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || 'Error en el registro');
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error en registerUser:', error);
+    throw error;
+  }
+};
