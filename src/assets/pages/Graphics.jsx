@@ -291,45 +291,49 @@ const Graphics = () => {
             </div>
           </div>
         </footer>
+        <div className="chart-container">
         <div className="chart-grid">
-          
         <div className="chart-item">
-          <SensorChart 
-            endpoint="/sensor/data" 
-            title="Temperatura" 
-            color="rgb(66, 124, 160)" 
-            unit="°C"
-          />
+            <SensorChart 
+              endpoint="/sensor/data" 
+              title="Temperatura" 
+              color="rgb(66, 124, 160)" 
+              unit="°C"
+            />
+          </div>
         </div>
-
+        <div className="chart-grid">
         <div className="chart-item">
-          <SensorChart 
-            endpoint="/sensor/data" 
-            title="Humedad" 
-            color="rgb(66, 124, 160)" 
-            unit="%"
-            valueSelector={data => data.map(item => item.humidity)}
-          />
+            <SensorChart 
+              endpoint="/sensor/data" 
+              title="Humedad" 
+              color="rgb(66, 124, 160)" 
+              unit="%"
+              valueSelector={data => data.map(item => item.humidity)}
+            />
+          </div>
         </div>
-
+        <div className="chart-grid">
         <div className="chart-item">
-          <SensorChart 
-            endpoint="/bmp180/data" 
-            title="Presión Atmosférica" 
-            color="rgb(212, 208, 0)" 
-            unit="hPa"
-          />
+            <SensorChart 
+              endpoint="/bmp180/data" 
+              title="Presión Atmosférica" 
+              color="rgb(212, 208, 0)" 
+              unit="hPa"
+            />
+          </div>
         </div>
-        
+        <div className="chart-grid">
         <div className="chart-item">
-          <SensorChart 
-            endpoint="/wind/data" 
-            title="Velocidad del Viento" 
-            color="rgb(212, 208, 0)" 
-            unit="km/h"
-          />
+            <SensorChart 
+              endpoint="/wind/data" 
+              title="Velocidad del Viento" 
+              color="rgb(212, 208, 0)" 
+              unit="km/h"
+            />
+          </div>
         </div>
-      </div>
+        </div>
       </div>
     </div>
     </NotificationProvider>
