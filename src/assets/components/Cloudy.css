@@ -1,0 +1,92 @@
+.cloudy-container {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cloudy-nav-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .cloudy-nav-links a:hover {
+    text-decoration: underline;
+    color: orange;
+  }
+  .cloudy-navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .cloudy-logo {
+    margin-left: 200px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .cloudy-logo img {
+    height: 30px;
+  }
+  
+  .cloudy-logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+  }
+  
+  .cloudy-nav-links {
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .cloudy-nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .cloudy-nav-links li {
+    cursor: pointer;
+  }
+  
+  .cloudy-button {
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 50px;
+  }
+  
+  .cloudy-content {
+    max-width: 500px;
+    margin-left: 2rem;
+    margin-top: 8rem;
+  }
+  
+  .cloudy-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cloudy-content p {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .cloudy-footer {
+    font-size: 0.8rem;
+    text-align: right;
+    padding: 1rem 2rem;
+  }

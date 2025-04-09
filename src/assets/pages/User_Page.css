@@ -1,0 +1,499 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #181818;
+    color: white;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 60px; /* Empujar hacia abajo para evitar la superposición con la barra de navegación */
+  }
+  
+  /* Grupo de Asociados y Solicitudes */
+  .sidebar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+  }
+  
+  /* Grupo de Estaciones */
+  .sidebar-stations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  /* Botones de la Sidebar */
+  .sidebar-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background 0.3s ease;
+  }
+  
+  /* Iconos */
+  .sidebar-btn .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Efecto de botón activo */
+  .sidebar-btn.active {
+    background: #333;
+    border-left: 4px solid #ff9500;
+    font-weight: bold;
+  }
+  /* Ajustar la lista de solicitudes para que no sea tapada por la navbar */
+.request-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinear los elementos */
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 100px; /* Espacio extra debajo de la navbar */
+  }
+  
+  .user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .request-item p {
+    flex-grow: 1; /* Hace que el texto ocupe el espacio disponible */
+    margin: 0;
+  }
+  
+  /* Contenedor de botones alineado a la derecha */
+  .request-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Botón de Aceptar */
+  .request-buttons button:first-child {
+    background-color: #28a745; /* Verde */
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  /* Botón de Rechazar */
+  .request-buttons button:last-child {
+    background-color: #dc3545; /* Rojo */
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Efecto hover */
+  .request-buttons button:hover {
+    opacity: 0.8;
+  }
+ /* Contenedor principal de estaciones y colaboradores */
+.stations-collaborators-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 80px auto 20px; /* Margen superior para evitar la navbar */
+    padding: 0 20px;
+  }
+  
+  /* Tarjeta de estación con colaboradores */
+  .station-collaborators {
+    background: #222;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 4px solid #ff9500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Título de la estación */
+  .station-title {
+    color: #ff9500;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Plan de la estación */
+  .station-plan {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  
+  /* Lista de colaboradores */
+  .collaborators-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+  }
+  
+  /* Item de colaborador */
+  .collaborator-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: #333;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  .collaborator-item:hover {
+    background: #3a3a3a;
+    transform: translateX(5px);
+  }
+  
+  /* Información del colaborador */
+  .collaborator-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Imagen del usuario */
+  .user-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid #ff9500;
+  }
+  
+  /* Mensaje cuando no hay colaboradores */
+  .no-collaborators {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 6px;
+  }
+  
+  /* Texto del nombre de usuario */
+  .collaborator-info div p {
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  /* ID del colaborador */
+  .collaborator-info div small {
+    color: #aaa;
+    font-size: 12px;
+  }
+  
+  /* Contenido principal */
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #181818;
+  }
+  
+  /* Lista de estaciones (para la sección de estaciones) */
+  .stations-list {
+    margin-top: 80px; /* Espacio para la navbar */
+  }
+  
+  .station-item {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ff9500;
+  }
+  
+  .station-item h3 {
+    color: #ff9500;
+    margin-top: 0;
+  }
+  
+  .station-item p {
+    color: #ddd;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Adaptación para móviles */
+  @media (max-width: 768px) {
+    .stations-collaborators-container {
+      padding: 0 10px;
+    }
+    
+    .station-collaborators {
+      padding: 15px;
+    }
+    
+    .user-img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  /* Estilos para la vista detallada de estación */
+.station-detail {
+  background: #222;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 80px auto 20px;
+  max-width: 800px;
+  border-left: 4px solid #ff9500;
+}
+
+.station-title {
+  color: #ff9500;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.station-info {
+  background: #333;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.station-info p {
+  margin: 8px 0;
+  color: #ddd;
+}
+
+.collaborators-title {
+  color: #ff9500;
+  margin: 25px 0 15px;
+  font-size: 20px;
+}
+/* Estilos para el formulario de solicitud */
+.requests-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 80px; /* Espacio para la navbar */
+  padding: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sección de envío de solicitud */
+.send-request-section {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ff9500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.send-request-section h3 {
+  color: #ff9500;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Formulario de solicitud */
+.request-form {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.request-input {
+  flex: 1;
+  padding: 12px 15px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+}
+
+.request-input:focus {
+  outline: none;
+  border-color: #ff9500;
+}
+
+/* Botón de enviar solicitud */
+.send-request-btn {
+  padding: 12px 20px;
+  background-color: #ff9500;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.send-request-btn:hover:not(:disabled) {
+  background-color: #ffaa33;
+}
+
+.send-request-btn.disabled {
+  background-color: #444;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* Mensajes de estado */
+.success-message {
+  color: #4CAF50;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.error-message {
+  color: #f44336;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Sección de lista de solicitudes */
+.requests-list-section {
+  margin-top: 30px;
+}
+
+.requests-list-section h3 {
+  color: #ff9500;
+  margin-bottom: 20px;
+}
+
+/* Lista de solicitudes */
+.requests-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Item de solicitud */
+.request-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #ff9500;
+}
+
+/* Información de la solicitud */
+.request-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.request-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #ff9500;
+}
+
+.request-info div p {
+  margin: 0;
+  color: white;
+  font-size: 15px;
+}
+
+.request-info div small {
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* Botones de solicitud */
+.request-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.request-buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.request-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* Botón de aceptar */
+.accept-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Botón de rechazar */
+.reject-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+  .request-form {
+    flex-direction: column;
+  }
+  
+  .request-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .request-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+.view-graphics-btn {
+  background-color: #ff9500;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-graphics-btn:hover {
+  background-color: #e68600;
+}
