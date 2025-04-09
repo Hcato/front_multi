@@ -1,0 +1,120 @@
+.register-container {
+    background-color: #111;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .register-navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .register-navbar img {
+    height: 30px;
+  }
+  
+  .register-navbar span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 1rem;
+  }
+  
+  .register-form h1 {
+    text-align: center;
+  }
+  
+  .register-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .register-form input[type="text"],
+  .register-form input[type="email"],
+  .register-form input[type="password"],
+  .register-form input[type="file"] {
+    margin-top: 0.3rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background-color: transparent;
+    color: white;
+    outline: none;
+  }
+  
+  .register-form input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  .register-form button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .register-form button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .register-form p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .register-footer {
+    font-size: 0.8rem;
+    text-align: right;
+    padding: 1rem 2rem;
+  }
+  /* registered.css */
+.error-message {
+    color: #ff3333;
+    margin: 10px 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffeeee;
+    border-radius: 4px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+  }
+  
+  .checkbox-label span {
+    font-size: 0.9rem;
+  }
+  
+  .login-redirect {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .cloudy-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
